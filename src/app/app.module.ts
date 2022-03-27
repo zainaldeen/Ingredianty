@@ -3,14 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
+import { RecipesComponent } from './components/recipes/recipes.component';
+import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
+import { RecipesDetailsComponent } from './components/recipes/recipes-details/recipes-details.component';
+import { RecipesItemComponent } from './components/recipes/recipes-list/recipes-item/recipes-item.component';
+import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ShoppingEditComponent } from './components/shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
-    ServersComponent
+    RecipesComponent,
+    RecipesListComponent,
+    RecipesDetailsComponent,
+    RecipesItemComponent,
+    ShoppingListComponent,
+    HeaderComponent,
+    ShoppingEditComponent,
+
   ],
   imports: [
     BrowserModule,
