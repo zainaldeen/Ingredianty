@@ -12,6 +12,8 @@ export class ServersComponent implements OnInit {
   buttonMessage: string = "Add Server";
   typedServer: string = "";
   flage = false;
+
+  servers: string[] = ['Testserver', 'Testserver 2'];
   constructor() {
   }
 
@@ -20,9 +22,11 @@ export class ServersComponent implements OnInit {
 
   addNewServer() {
     if (!this.flage) {
+      this.servers.push(this.typedServer);
       this.message = "Server has been added";
       this.buttonMessage = "Remove Server";
     }else {
+      this.servers.pop();
       this.message = "No Server has added yet";
       this.buttonMessage = "Add Server";
     }

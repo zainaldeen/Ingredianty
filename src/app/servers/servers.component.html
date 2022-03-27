@@ -2,10 +2,9 @@
 <!-- <input (input)="addTypedServer($event)"> -->
 
 <input [(ngModel)]="typedServer" ><br><br>
-<h4 *ngIf="flage"> {{ typedServer }}</h4>
+<h4 *ngIf="flage"> {{ typedServer }} added successfully!!</h4>
 
 
 <button class="btn btn-primary" (click)="addNewServer()"> {{ buttonMessage }} </button>
 <p> {{ message }} </p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="server of servers"></app-server>
