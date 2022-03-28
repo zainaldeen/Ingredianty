@@ -5,6 +5,9 @@
 
   <hr>
   <div  *ngFor="let recipe of recipes">
-    <app-recipes-item [recipe]="recipe"></app-recipes-item>
+    <app-recipes-item
+      [recipe]="recipe"
+      (recipeSelected)="onRecipeSelected($event)">
+    ></app-recipes-item>
   </div>
 </div>
