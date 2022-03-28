@@ -1,13 +1,13 @@
 <div>
   <div class="row">
     <label for="serverName">Server Name</label>
-    <input type="text" class="form-control" placeholder="Server name" id="serverName" [(ngModel)]="serverName">
+    <input type="text" class="form-control" placeholder="Server name" id="serverName" #serverName>
     <label for="serverContent">Server Content</label>
-    <input type="text" class="form-control" placeholder="Server Content" id="serverContent" [(ngModel)]="serverContent">
+    <input type="text" class="form-control" placeholder="Server Content" id="serverContent" #serverContent>
 
   </div>
   <div class="row">
-    <button class="btn btn-primary" style="margin-right: 5px" (click)="addServer()">Add Server</button>
-    <button class="btn btn-success" (click)="addBlueprint()">Add Blueprint</button>
+    <button class="btn btn-primary" style="margin-right: 5px" (click)="addServer(serverName, serverContent)">Add Server</button>
+    <button class="btn btn-success" (click)="addBlueprint(serverName, serverContent)">Add Blueprint</button>
   </div>
 </div>
