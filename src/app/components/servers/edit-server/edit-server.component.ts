@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter, ElementRef} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-edit-server',
@@ -9,28 +9,29 @@ export class EditServerComponent implements OnInit {
 
   @Output() onServerCreated = new EventEmitter<{type: string, name: string, content: string}>();
   @Output() onBlueprintCreated = new EventEmitter<{type:string, name: string, content: string}>();
-
-  serverName: string = '';
-  serverContent: string = '';
+  @ViewChild('serverName') serverName:ElementRef = {nativeElement: {value: ''}};
+  @ViewChild('serverContent') serverContent:ElementRef = {  nativeElement: {value: ''}};
+  // serverName: string = '';
+  // serverContent: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addServer(serverName: HTMLInputElement, serverContent: HTMLInputElement) {
+  addServer() {
     this.onServerCreated.emit({
       type: 'server',
-      name: serverName.value,
-      content: serverContent.value
+      name: this.serverName.nativeElement.value,
+      content: this.serverContent.nativeElement.value
     });
   }
 
-  addBlueprint(serverName: HTMLInputElement, serverContent: HTMLInputElement) {
+  addBlueprint() {
     this.onBlueprintCreated.emit({
       type: 'blueprint',
-      name: serverName.value,
-      content: serverContent.value
+      name: this.serverName.nativeElement.value,
+      content: this.serverContent.nativeElement.value
     });
   }
 
