@@ -4,22 +4,22 @@
       <div class="row">
         <div class="col-sm-5">
           <label for="name">Name</label>
-          <input id="name" type="text" name="name" class="form-control">
+          <input id="name" type="text" name="name" class="form-control" [(ngModel)]="name">
         </div>
         <div class="col-sm-2">
           <label for="amount">Amount</label>
-          <input id="amount" type="number" name="amount" class="form-control">
+          <input id="amount" type="number" name="amount" class="form-control" [(ngModel)]="amount">
         </div>
       </div>
 
       <div class="col-xs-12" style="margin: 10px; display: flex; gap: 5px">
-        <button class="btn btn-primary">Add</button>
-        <button class="btn btn-danger" >Delete</button>
-        <button class="btn btn-success">Clear</button>
+        <button class="btn btn-primary" (click)="addItem()">Add</button>
+        <button class="btn btn-danger" (click)="clearItem()">Delete</button>
+        <button class="btn btn-success" (click)="clearItem()">Clear</button>
       </div>
 
     </form>
-    
+
 
   </div>
 </div>
