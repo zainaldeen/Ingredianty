@@ -3,12 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { DetailsComponent } from './components/details/details.component';
+import { ServersComponent } from './components/servers/servers.component';
+import { EditServerComponent } from './components/servers/edit-server/edit-server.component';
+import { ServersListComponent } from './components/servers/servers-list/servers-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsComponent
+    ServersComponent,
+    EditServerComponent,
+    ServersListComponent,
+
   ],
   imports: [
     BrowserModule,

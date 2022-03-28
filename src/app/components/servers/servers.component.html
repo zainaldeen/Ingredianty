@@ -1,0 +1,11 @@
+<div class="div row">
+  <div class="col-md-12">
+    <app-edit-server
+      (onServerCreated)="addNewServer($event)"
+      (onBlueprintCreated)="addNewBlueprint($event)"
+    ></app-edit-server>
+  </div>
+  <div class="col-md-12" *ngFor="let server of servers">
+    <app-servers-list [server]="server" ></app-servers-list>
+  </div>
+</div>
