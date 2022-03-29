@@ -7,8 +7,7 @@
 <main class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="selectedUrl==='recipe'"></app-recipes>
-      <app-shopping-list *ngIf="selectedUrl === 'shopping-list'"></app-shopping-list>
+      <router-outlet></router-outlet>
     </div>
 
   </div>

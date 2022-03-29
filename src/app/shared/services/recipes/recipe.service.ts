@@ -1,9 +1,15 @@
 import {RecipeModel} from "../../models/RecipeModel/recipe.model";
-import {EventEmitter} from "@angular/core";
+import {EventEmitter, Injectable} from "@angular/core";
 import {Ingredient} from "../../models/IngredientModel/ingredient.model";
+import {ShoppingListService} from "../shoppingList/shopping.service";
 
-
+@Injectable()
 export class RecipeService {
+  constructor(private shoppingListService: ShoppingListService) {
+
+  }
+
+
   recipe! : RecipeModel;
   recipes: RecipeModel[] = [
     new RecipeModel( 1,'A Test RecipeModel 1', 'This is simply a test 1', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
@@ -43,4 +49,9 @@ export class RecipeService {
     this.recipe = recipe;
     this.selectedRecipe.emit(recipe);
   }
+
+  addIngredientToShoppingList(ingredients: Ingredient[]) {
+    this.shoppingListService.addItems(ingredients);
+  }
+
 }

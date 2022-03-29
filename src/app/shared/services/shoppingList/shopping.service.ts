@@ -16,8 +16,15 @@ export class ShoppingListService {
   shoppingItemAdded = new EventEmitter<Ingredient[]>();
 
 
-  addItem(name: string, amount: number) {
-    this.ingredients.push(new Ingredient(name, amount));
+  addItem(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
     this.shoppingItemAdded.emit(this.ingredients.slice());
+  }
+
+
+  addItems(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);
+    this.shoppingItemAdded.emit(this.ingredients.slice());
+
   }
 }
