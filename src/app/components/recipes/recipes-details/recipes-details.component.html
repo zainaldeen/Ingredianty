@@ -1,1 +1,53 @@
-<p>recipes-details works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{recipe.name}}</h1>
+<!--        <h1>RecipeModel Name</h1>-->
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                 <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-responsive">
+<!--              <img [src]="" alt="" class="img-responsive">-->
+            </div>
+        </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" appDropDown>
+           Manage RecipeModel <span class="caret"></span>
+          <ul class="dropdown-menu">
+            <li><a href="#"> Add Ingredient</a></li>
+            <li><a href="#"> Edit RecipeModel</a></li>
+            <li><a href="#"> Delete RecipeModel</a></li>
+          </ul>
+        </button>
+      </div>
+<!--        <div class="row">-->
+<!--            <div class="col-xs-12">-->
+<!--                <h3>Ingredients</h3>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-xs-12">-->
+<!--                <ul>-->
+<!--                   &lt;!&ndash; <li *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}} ({{ingredient.amount}})</li> &ndash;&gt;-->
+<!--                  <span> ingredient </span>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Description</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                 <p>{{recipe.description}}</p>
+<!--              <span> description </span>-->
+            </div>
+        </div>
+    </div>
+
+</div>

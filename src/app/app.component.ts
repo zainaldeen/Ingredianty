@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  selectedUrl: string = 'recipe';
+  selectUrl(url: string) {
+    this.selectedUrl = url;
+  }
+
 }

@@ -1,10 +1,13 @@
 
 <main class="row">
   <div class="col-md-5">
-    <app-recipes-item></app-recipes-item>
+    <app-recipes-list (recipeSelected)="handleSelectingRecipe($event)"></app-recipes-list>
   </div>
   <div class="col-md-7">
-    <app-recipes-details></app-recipes-details>
+    <app-recipes-details *ngIf="selectedRecipe.id !== -1" [recipe]="selectedRecipe"></app-recipes-details>
+    <span *ngIf="selectedRecipe.id === -1"> Please Select a Recipe</span>
+
+
   </div>
 
 </main>
