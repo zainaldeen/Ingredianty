@@ -1,17 +1,18 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
+import { UrlHandleService } from '../../shared/services/header/urlHandle.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() onSelectUrl = new EventEmitter<string>();
-  constructor() { }
+  selectUrl: string = 'recipe';
+  constructor(private urlHandleService: UrlHandleService) { }
 
   ngOnInit(): void {
+    this.selectUrl = this.urlHandleService.url;
   }
   setUrl(url:string) {
-    this.onSelectUrl.emit(url);
+    this.urlHandleService.setUrl(url);
   }
 }

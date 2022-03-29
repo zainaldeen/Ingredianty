@@ -12,6 +12,7 @@ export class RecipesDetailsComponent implements OnInit {
     name: '',
     description: '',
     imagePath: '',
+    ingredients: []
   };
   constructor() { }
 
