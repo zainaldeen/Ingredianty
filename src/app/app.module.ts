@@ -16,7 +16,8 @@ import {RouterModule, Routes} from "@angular/router";
 const appRoutes : Routes = [
     { path: '', component: RecipesComponent },
     { path: 'recipes', component: RecipesComponent },
-    { path: 'shopping-list', component: ShoppingListComponent }
+    { path: 'shopping-list', component: ShoppingListComponent },
+  { path: '**', redirectTo: '/' }
   ];
 
 @NgModule({
