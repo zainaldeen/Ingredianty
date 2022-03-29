@@ -21,14 +21,14 @@ export class RecipeService {
     ),
     new RecipeModel( 3,'A Test RecipeModel 3', 'This is simply a test 3', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
     [
-      new Ingredient('Meat', 1),
+      new Ingredient('frise', 100),
       new Ingredient('Vegetables', 20)
     ]
     ),
     new RecipeModel( 4,'A Test RecipeModel 4', 'This is simply a test 4', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
     [
-      new Ingredient('Meat', 1),
-      new Ingredient('Vegetables', 20)
+      new Ingredient('Vegetables', 102),
+      new Ingredient('frise', 10)
     ]
     ),
   ];
