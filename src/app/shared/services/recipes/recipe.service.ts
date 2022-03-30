@@ -45,9 +45,13 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
-  selectRecipe(recipe: RecipeModel) {
-    this.recipe = recipe;
-    this.selectedRecipe.emit(recipe);
+  selectRecipe(id: number) : RecipeModel {
+    let idx : number = this.recipes.findIndex(e => {
+      return e.id === id;
+    });
+    this.recipe = this.recipes[idx];
+    return this.recipe;
+    // this.selectedRecipe.emit(recipe);
   }
 
   addIngredientToShoppingList(ingredients: Ingredient[]) {

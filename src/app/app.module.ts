@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { RoutesModule } from './routes/routes.module';
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
@@ -13,12 +13,6 @@ import { ShoppingEditComponent } from './components/shopping-list/shopping-edit/
 import { DropDownDirective } from './components/header/directives/dropDownDirective/drop-down.directive';
 import {RouterModule, Routes} from "@angular/router";
 
-const appRoutes : Routes = [
-    { path: '', component: RecipesComponent },
-    { path: 'recipes', component: RecipesComponent },
-    { path: 'shopping-list', component: ShoppingListComponent },
-  { path: '**', redirectTo: '/' }
-  ];
 
 @NgModule({
   declarations: [
@@ -36,7 +30,7 @@ const appRoutes : Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RoutesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

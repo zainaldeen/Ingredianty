@@ -4,8 +4,8 @@
     <app-recipes-list></app-recipes-list>
   </div>
   <div class="col-md-7">
-    <app-recipes-details *ngIf="selectedRecipe.id !== -1" [recipe]="selectedRecipe"></app-recipes-details>
-    <span *ngIf="selectedRecipe.id === -1"> Please Select a Recipe</span>
+    <router-outlet></router-outlet>
+<!--    <app-recipes-details *ngIf="selectedRecipe.id !== -1" [recipe]="selectedRecipe"></app-recipes-details>-->
 
 
   </div>
