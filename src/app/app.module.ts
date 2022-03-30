@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ShoppingEditComponent } from './components/shopping-list/shopping-edit/shopping-edit.component';
 import { DropDownDirective } from './components/header/directives/dropDownDirective/drop-down.directive';
 import { RecipeStartComponent } from './components/recipes/recipe-start/recipe-start.component';
+import { EditRecipeComponent } from './components/recipes/edit-recipe/edit-recipe.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { RecipeStartComponent } from './components/recipes/recipe-start/recipe-s
     ShoppingEditComponent,
     DropDownDirective,
     RecipeStartComponent,
+    EditRecipeComponent,
 
   ],
   imports: [

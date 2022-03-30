@@ -1,52 +1,52 @@
 <div class="row">
-    <div class="col-xs-12">
-        <h1>{{recipe.name}}</h1>
-<!--        <h1>RecipeModel Name</h1>-->
-        <hr>
-    </div>
+
 </div>
 
 <div class="row">
-    <div class="col-xs-12">
-        <div class="row">
+    <div class="col-xs-12 ">
+        <div class="row details">
+          <div class="col-xs-12">
+            <h1>{{recipe.name}}</h1>
+            <hr>
+          </div>
+          <div  class="col-xs-8">
+               <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-responsive">
+          </div>
+          <div class="btn-group col-xs-4">
+            <button class="btn btn-primary" appDropDown>
+              Manage RecipeModel <span class="caret"></span>
+              <ul class="dropdown-menu">
+                <li><a style="cursor: pointer" (click)="addIngredientToList()"> Add Ingredient To List</a></li>
+                <li><a style="cursor: pointer" [routerLink]="['edit']"> Edit RecipeModel</a></li>
+                <li><a> Delete RecipeModel</a></li>
+              </ul>
+            </button>
+          </div>
+        </div>
+
+        <div class="row details">
+          <div class="col-xs-12">
+              <h3>Ingredients</h3>
+          </div>
+          <div class="col-xs-12">
+            <ul>
+              <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+                {{ingredient.name}} ({{ingredient.amount}})
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="row details">
+          <div class="col-xs-12">
+              <h3>Description</h3>
+          </div>
             <div class="col-xs-12">
-                 <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-responsive">
-<!--              <img [src]="" alt="" class="img-responsive">-->
+              <p>{{recipe.description}}</p>
             </div>
         </div>
-      <div class="btn-group">
-        <button class="btn btn-primary" appDropDown>
-           Manage RecipeModel <span class="caret"></span>
-          <ul class="dropdown-menu">
-            <li><a style="cursor: pointer" (click)="addIngredientToList()"> Add Ingredient To List</a></li>
-            <li><a style="cursor: pointer"> Edit RecipeModel</a></li>
-            <li><a> Delete RecipeModel</a></li>
-          </ul>
-        </button>
-      </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <h3>Ingredients</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <ul>
-                    <li *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}} ({{ingredient.amount}})</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <h3>Description</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                 <p>{{recipe.description}}</p>
-<!--              <span> description </span>-->
-            </div>
-        </div>
+
     </div>
 
 </div>
