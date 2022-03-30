@@ -11,7 +11,7 @@ import { ShoppingListComponent } from './components/shopping-list/shopping-list.
 import { HeaderComponent } from './components/header/header.component';
 import { ShoppingEditComponent } from './components/shopping-list/shopping-edit/shopping-edit.component';
 import { DropDownDirective } from './components/header/directives/dropDownDirective/drop-down.directive';
-import {RouterModule, Routes} from "@angular/router";
+import { RecipeStartComponent } from './components/recipes/recipe-start/recipe-start.component';
 
 
 @NgModule({
@@ -25,6 +25,7 @@ import {RouterModule, Routes} from "@angular/router";
     HeaderComponent,
     ShoppingEditComponent,
     DropDownDirective,
+    RecipeStartComponent,
 
   ],
   imports: [
