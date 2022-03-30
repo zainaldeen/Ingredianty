@@ -1,5 +1,9 @@
 img {
-  max-width: 40%;
-  max-height: 40%;
-  margin: 20px 10px;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.details {
+  border: 1px solid #ccc;
+  padding: 20px;
 }

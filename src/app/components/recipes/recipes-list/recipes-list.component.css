@@ -1,0 +1,14 @@
+
+.details {
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.details-items {
+  max-height: 500px;
+  overflow-y: auto;
+}

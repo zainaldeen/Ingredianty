@@ -1,13 +1,17 @@
-<div class="row">
-  <div class="col-xs-12">
-      <button class="btn btn-primary">New RecipeModel</button>
+<div class="row details">
+  <div class="col-xs-12 details-button">
+      <button class="btn btn-primary"  routerLink="new">  Add New Recipe</button>
   </div>
 
-  <hr>
-  <div  *ngFor="let recipe of recipes">
-    <app-recipes-item
-      [recipe]="recipe"
-    >
-    ></app-recipes-item>
+  <div>
+
+    <div *ngFor="let recipe of recipes" >
+      <app-recipes-item
+        [recipe]="recipe"
+      >
+      </app-recipes-item>
+    </div>
+
   </div>
+
 </div>

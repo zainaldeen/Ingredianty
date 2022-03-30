@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RecipeModel} from "../../../shared/models/RecipeModel/recipe.model";
 import { RecipeService } from "../../../shared/services/recipes/recipe.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 
 @Component({
   selector: 'app-recipes-details',
@@ -9,16 +9,13 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./recipes-details.component.css']
 })
 export class RecipesDetailsComponent implements OnInit {
-  @Input() recipe: RecipeModel = {
-    id: -1,
-    name: '',
-    description: '',
-    imagePath: '',
-    ingredients: []
-  };
-  constructor(private recipeService: RecipeService, private router:Router) { }
+  recipe!: RecipeModel;
+  constructor(private recipeService: RecipeService, private router:Router, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+        this.recipe =  this.recipeService.selectRecipe(+params['id']);
+    });
   }
 
   addIngredientToList() {
